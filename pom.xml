@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>info.magnolia.maven.poms-forge</groupId>
+    <artifactId>magnolia-parent-pom-forge</artifactId>
+    <version>37</version>
+  </parent>
+  
+  <groupId>info.magnolia.ui</groupId>
+  <artifactId>magnolia-ui-color-picker-field</artifactId>
+  <version>1.0-SNAPSHOT</version>
+  <packaging>jar</packaging>
+  
+  <name>Magnolia Color Picker Field Module</name>
+  <description>Vaadin's ColorPicker component wrapped in a custom field. </description>
+
+  <properties>
+    <magnoliaBundleVersion>6.0</magnoliaBundleVersion>
+    <magnoliaVersion>6.0</magnoliaVersion>
+    <javaVersion>1.8</javaVersion>
+  </properties>
+
+  <dependencyManagement>
+    <dependencies>
+      <dependency>
+        <groupId>info.magnolia.bundle</groupId>
+        <artifactId>magnolia-bundle-parent</artifactId>
+        <version>${magnoliaBundleVersion}</version>
+        <type>pom</type>
+        <scope>import</scope>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
+
+  <dependencies>
+    <dependency>
+      <groupId>info.magnolia</groupId>
+      <artifactId>magnolia-core</artifactId>
+    </dependency>
+    
+    <dependency>
+      <groupId>info.magnolia.ui</groupId>
+      <artifactId>magnolia-ui-framework-compatibility</artifactId>
+    </dependency>
+  </dependencies>
+
+</project>
