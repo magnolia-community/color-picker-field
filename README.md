@@ -1,7 +1,7 @@
 ## Color Picker Field
 Vaadin's ColorPicker component wrapped in a custom field. 
 
-Forge Documentation: __[https://wiki.magnolia-cms.com/display/WIKI/Color+Picker+Field](https://wiki.magnolia-cms.com/display/WIKI/Color+picker+field+module)__
+Forge Documentation: __[https://wiki.magnolia-cms.com/display/WIKI/Color+Picker+Field](https://wiki.magnolia-cms.com/display/WIKI/Color+picker+field)__
 
 ``` xml
 <dependency> 
