@@ -1,9 +1,9 @@
 package info.magnolia.ui.field;
 
 import com.vaadin.ui.Component;
-import com.vaadin.v7.shared.ui.colorpicker.Color;
-import com.vaadin.v7.ui.ColorPicker;
-import com.vaadin.v7.ui.CustomField;
+import com.vaadin.shared.ui.colorpicker.Color;
+import com.vaadin.ui.ColorPicker;
+import com.vaadin.ui.CustomField;
 
 /**
  * ColorPickerField creates (and sets) the Vaadin ColorPicker component.
@@ -18,23 +18,21 @@ public class ColorPickerField extends CustomField<Integer> {
         colorPicker = new ColorPicker();
     }
 
-    public ColorPickerField(int rgb) {
-        colorPicker = new ColorPicker();
-        colorPicker.setColor(new Color(rgb));
-    }
-
-    public void setColor(int rgb) {
-        colorPicker.setColor(new Color(rgb));
+    @Override
+    protected void doSetValue(Integer value) {
+        if(value!= null) {
+            colorPicker.setValue(new Color(value));
+        }
     }
 
     @Override
     protected Component initContent() {
-        colorPicker.addColorChangeListener(event -> setValue(event.getColor().getRGB()));
+        colorPicker.addValueChangeListener(event -> setValue(event.getValue().getRGB()));
         return colorPicker;
     }
 
     @Override
-    public Class<? extends Integer> getType() {
-         return Integer.class;
+    public Integer getValue() {
+        return this.colorPicker.getValue().getRGB();
     }
 }
