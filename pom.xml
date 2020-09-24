@@ -23,8 +23,7 @@
   </scm>
 
   <properties>
-    <magnoliaBundleVersion>6.0</magnoliaBundleVersion>
-    <magnoliaVersion>6.0</magnoliaVersion>
+    <magnoliaBundleVersion>6.2</magnoliaBundleVersion>
     <javaVersion>1.8</javaVersion>
   </properties>
 
@@ -44,11 +43,13 @@
     <dependency>
       <groupId>info.magnolia</groupId>
       <artifactId>magnolia-core</artifactId>
+      <scope>compile</scope>
     </dependency>
-    
+
     <dependency>
       <groupId>info.magnolia.ui</groupId>
-      <artifactId>magnolia-ui-framework-compatibility</artifactId>
+      <artifactId>magnolia-ui-framework</artifactId>
+      <scope>compile</scope>
     </dependency>
   </dependencies>
 
