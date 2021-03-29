@@ -16,6 +16,7 @@ public class ColorPickerField extends CustomField<Integer> {
 
     public ColorPickerField() {
         colorPicker = new ColorPicker();
+        colorPicker.setModal(true);
     }
 
     @Override
